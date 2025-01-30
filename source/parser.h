@@ -1,8 +1,8 @@
-/* A Bison parser, made by GNU Bison 3.5.1.  */
+/* A Bison parser, made by GNU Bison 3.8.2.  */
 
 /* Bison interface for Yacc-like parsers in C
 
-   Copyright (C) 1984, 1989-1990, 2000-2015, 2018-2020 Free Software Foundation,
+   Copyright (C) 1984, 1989-1990, 2000-2015, 2018-2021 Free Software Foundation,
    Inc.
 
    This program is free software: you can redistribute it and/or modify
@@ -16,7 +16,7 @@
    GNU General Public License for more details.
 
    You should have received a copy of the GNU General Public License
-   along with this program.  If not, see <http://www.gnu.org/licenses/>.  */
+   along with this program.  If not, see <https://www.gnu.org/licenses/>.  */
 
 /* As a special exception, you may create a larger work that contains
    part or all of the Bison parser skeleton and distribute that work
@@ -31,8 +31,9 @@
    This special exception was added by the Free Software Foundation in
    version 2.2 of Bison.  */
 
-/* Undocumented macros, especially those whose name start with YY_,
-   are private implementation details.  Do not rely on them.  */
+/* DO NOT RELY ON FEATURES THAT ARE NOT DOCUMENTED in the manual,
+   especially those whose name start with YY_ or yy_.  They are
+   private implementation details that can be changed or removed.  */
 
 #ifndef YY_YY_PARSER_H_INCLUDED
 # define YY_YY_PARSER_H_INCLUDED
@@ -44,41 +45,46 @@
 extern int yydebug;
 #endif
 
-/* Token type.  */
+/* Token kinds.  */
 #ifndef YYTOKENTYPE
 # define YYTOKENTYPE
   enum yytokentype
   {
-    ASSIGN = 258,
-    ELSE = 259,
-    IF = 260,
-    INT = 261,
-    RETURN = 262,
-    VOID = 263,
-    WHILE = 264,
-    PLUS = 265,
-    SUB = 266,
-    MULT = 267,
-    DIV = 268,
-    LT = 269,
-    LET = 270,
-    GT = 271,
-    GET = 272,
-    COMP = 273,
-    DIF = 274,
-    PV = 275,
-    VIR = 276,
-    LPAR = 277,
-    RPAR = 278,
-    LCOL = 279,
-    RCOL = 280,
-    LCHA = 281,
-    RCHA = 282,
-    RESTO = 283,
-    ID = 284,
-    NUM = 285,
-    ERR = 286
+    YYEMPTY = -2,
+    YYEOF = 0,                     /* "end of file"  */
+    YYerror = 256,                 /* error  */
+    YYUNDEF = 257,                 /* "invalid token"  */
+    ASSIGN = 258,                  /* ASSIGN  */
+    ELSE = 259,                    /* ELSE  */
+    IF = 260,                      /* IF  */
+    INT = 261,                     /* INT  */
+    RETURN = 262,                  /* RETURN  */
+    VOID = 263,                    /* VOID  */
+    WHILE = 264,                   /* WHILE  */
+    PLUS = 265,                    /* PLUS  */
+    SUB = 266,                     /* SUB  */
+    MULT = 267,                    /* MULT  */
+    DIV = 268,                     /* DIV  */
+    LT = 269,                      /* LT  */
+    LET = 270,                     /* LET  */
+    GT = 271,                      /* GT  */
+    GET = 272,                     /* GET  */
+    COMP = 273,                    /* COMP  */
+    DIF = 274,                     /* DIF  */
+    PV = 275,                      /* PV  */
+    VIR = 276,                     /* VIR  */
+    LPAR = 277,                    /* LPAR  */
+    RPAR = 278,                    /* RPAR  */
+    LCOL = 279,                    /* LCOL  */
+    RCOL = 280,                    /* RCOL  */
+    LCHA = 281,                    /* LCHA  */
+    RCHA = 282,                    /* RCHA  */
+    RESTO = 283,                   /* RESTO  */
+    ID = 284,                      /* ID  */
+    NUM = 285,                     /* NUM  */
+    ERR = 286                      /* ERR  */
   };
+  typedef enum yytokentype yytoken_kind_t;
 #endif
 
 /* Value type.  */
@@ -91,6 +97,8 @@ typedef int YYSTYPE;
 
 extern YYSTYPE yylval;
 
+
 int yyparse (void);
+
 
 #endif /* !YY_YY_PARSER_H_INCLUDED  */
